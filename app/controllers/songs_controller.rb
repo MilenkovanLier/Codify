@@ -12,8 +12,6 @@ class SongsController < ApplicationController
   end
 
   def create
-    song_params = params.require(:song).permit(:name)
-
     @song = Song.new(song_params)
 
     if @song.save
@@ -21,5 +19,19 @@ class SongsController < ApplicationController
     else
        render 'new'
     end
-  end 
+  end
+
+  def destroy
+      @song = Song.find(params[:id])
+
+      @song.destroy
+
+      redirect_to songs_path
+    end
+
+private
+  def song_params
+      params.require(:song).permit(:name)
+    end
+
 end
