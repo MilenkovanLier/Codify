@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-    root "songs#index"
+  root 'songs#index'
 
-    get "songs" => "songs#index"
-  end
+  get 'songs' => 'song#index'
+  get 'songs/new' => 'songs#new', as: :new_song
+  get 'songs/:id' => 'songs#show', as: :song
+
+  post "songs" => "songs#create"
+end
