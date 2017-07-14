@@ -4,17 +4,17 @@
   <strong>Name:</strong>
   <%= @artist.name %>
 </p>
-
 <h4>List of songs</h4>
 
 <% if @artist.songs.any? %>
   <ul>
     <% @artist.songs.each do |song| %>
-      <li><%= song.name %></li>
+      <li><%= link_to song.name, artist_song_path(song.artist_id, song.id) %></li>
     <% end %>
   </ul>
 <% else %>
   <p>There are no songs for this artist.</p>
 <% end %>
 
+<%= link_to 'New Song', new_artist_song_path(@artist.id) %>
 <%= link_to 'Back', artists_path %>

@@ -1,4 +1,4 @@
-<%= form_for @song do |f| %>
+<%= form_for [@artist,@artist.songs.new] do |f| %>
 
   <ul>
     <% @song.errors.full_messages.each do |msg| %>
@@ -10,8 +10,8 @@
   <%= f.text_field :name %>
 
 
-  <%= f.submit (@song.new_record? ? "Create") %>
+  <%= f.submit (@song.new_record? ? "Add" : "Update") %>
 
-  <%= f.label :artist_id %>
-  <%= f.collection_select(:artist_id, Artist.all, :id, :name) %>
+  <!-- <%= f.label :artist_id %> -->
+  <!-- <%= f.collection_select(:artist_id, Artist.all, :id, :name) %> -->
   <% end %>
