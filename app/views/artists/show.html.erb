@@ -4,6 +4,7 @@
   <strong>Name:</strong>
   <%= @artist.name %>
 </p>
+
 <h4>List of songs</h4>
 
 <% if @artist.songs.any? %>
@@ -15,6 +16,9 @@
 <% else %>
   <p>There are no songs for this artist.</p>
 <% end %>
+
+
+<%= image_tag @artist.image%>
 
 <%= link_to 'New Song', new_artist_song_path(@artist.id) %>
 <%= link_to 'Back', artists_path %>

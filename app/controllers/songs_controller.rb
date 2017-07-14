@@ -9,7 +9,7 @@ class SongsController < ApplicationController
 
   def new
     @artist = Artist.find(params[:artist_id])
-   @song = Song.new
+    @song = Song.new
   end
 
   def create
