@@ -35,6 +35,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 # Use jQuery for easier javascript
 gem 'jquery-rails', '~> 4.3.1'
 
+gem 'carrierwave', '0.11.2'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
 end
