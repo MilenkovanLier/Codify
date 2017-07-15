@@ -39,6 +39,9 @@ gem 'carrierwave', '0.11.2'
 
 gem 'cloudinary', '1.2.3'
 
+gem 'active_model_serializers', '~> 0.10.0'
+
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'factory_girl_rails', '4.7.0'
