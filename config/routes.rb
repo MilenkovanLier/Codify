@@ -5,5 +5,7 @@ Rails.application.routes.draw do
     resources :songs
   end
 
-
+  namespace :api do
+    resources :songs
+  end
 end
