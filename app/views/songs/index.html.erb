@@ -1,6 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+</head>
+
 <h1>songs</h1>
 
 <% @songs.each do |song| %>
     <p><%= link_to song.name, artist_song_path(song.artist_id, song.id) %></p>
 <% end %>
 <hr>
+
+
+
+<script>
+// JavaScript goes here.
+</script>
+</html>
