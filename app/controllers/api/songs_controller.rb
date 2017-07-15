@@ -1,5 +1,4 @@
-class Api::SongsController < ApplicationController
-  skip_before_action :verify_authenticity_token
+class Api::SongsController < Api::BaseController
 
   def index
     songs = Song.all
