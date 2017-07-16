@@ -5,28 +5,36 @@
   <%= @artist.name %>
 </p>
 
-<h4>List of songs</h4>
+<div id="list-songs">
+  <div class="list-of-songs">
+    <h4>List of songs</h4>
+  </div>
 
-<% if @artist.songs.any? %>
-  <ul>
+      <% if @artist.songs.any? %>
+  <ul id="songlist">
     <% @artist.songs.each do |song| %>
-      <li><%= link_to song.name, artist_song_path(song.artist_id, song.id) %></li>
-    <% end %>
+      <li class="songs">
+        <%= link_to song.name, artist_song_path(song.artist_id, song.id) %>
+      </li>
+        <% end %>
   </ul>
+
 <% else %>
+
   <p>There are no songs for this artist.</p>
+
 <% end %>
 
 
-<%= image_tag @artist.image%>
-<div id="footer">
-  <div class="footer-buttons">
-    <ul>
-      <label><span id="new-song"><%= link_to 'New Song', new_artist_song_path(@artist.id) %></label></li>
-      <label><span id="back"><%= link_to 'Back', artists_path %></label></li>
-      <form>
-        <input type="text" id="new-song" placeholder="Add new song">
-    </form>
-    </ul>
+  <%= image_tag @artist.image%>
+  <div id="footer">
+    <tr class="footer-buttons">
+      <ul>
+        <label><span id="new-song"><%= link_to 'New Song', new_artist_song_path(@artist.id) %></label></li>
+        <label><span id="back"><%= link_to 'Back', artists_path %></label></li>
+        <form onSubmit="submitTodo(); return false">
+          <input type="text" id="new-song" placeholder="Add new song">
+      </form>
+    </tr>
+    </div>
   </div>
-</div>
