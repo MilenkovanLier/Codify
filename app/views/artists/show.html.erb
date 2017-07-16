@@ -22,8 +22,11 @@
 <div id="footer">
   <div class="footer-buttons">
     <ul>
-      <li><label><input type="radio" name="new-song" value=""><%= link_to 'New Song', new_artist_song_path(@artist.id) %></label></li>
-      <li><label><input type="radio" name="back" value=""><%= link_to 'Back', artists_path %></label></li>
+      <label><span id="new-song"><%= link_to 'New Song', new_artist_song_path(@artist.id) %></label></li>
+      <label><span id="back"><%= link_to 'Back', artists_path %></label></li>
+      <form>
+        <input type="text" id="new-song" placeholder="Add new song">
+    </form>
     </ul>
   </div>
 </div>
