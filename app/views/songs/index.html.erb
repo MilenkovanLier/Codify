@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-</head>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
 
-<h1>songs</h1>
+  <h1 class="page-header">songs</h1>
 
-<% @songs.each do |song| %>
+  <% @songs.each do |song| %>
     <p><%= link_to song.name, artist_song_path(song.artist_id, song.id) %></p>
-<% end %>
-<hr>
+  <% end %>
+  <hr>
 
-
-
-<script>
+  <script>
 // JavaScript goes here.
-</script>
+  </script>
 </html>

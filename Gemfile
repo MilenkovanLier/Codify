@@ -43,7 +43,6 @@ gem 'active_model_serializers', '~> 0.10.0'
 
 gem 'has_secure_token'
 
-gem 'jquery-rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
