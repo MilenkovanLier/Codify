@@ -1,16 +1,14 @@
 <%= form_for [@artist,@artist.songs.new] do |f| %>
 
-  <ul>
+<div class="form-group" >
     <% @song.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
-  </ul>
 
   <%= f.label :name %>
   <%= f.text_field :name %>
-
-
   <%= f.submit (@song.new_record? ? "Add" : "Update") %>
+</div>
 
   <!-- <%= f.label :artist_id %> -->
   <!-- <%= f.collection_select(:artist_id, Artist.all, :id, :name) %> -->

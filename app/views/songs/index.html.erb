@@ -1,6 +1,12 @@
-<h1>songs</h1>
 
-<% @songs.each do |song| %>
+  <h1 class="page-header">songs</h1>
+
+  <% @songs.each do |song| %>
     <p><%= link_to song.name, artist_song_path(song.artist_id, song.id) %></p>
-<% end %>
-<hr>
+  <% end %>
+  <hr>
+
+  <script>
+// JavaScript goes here.
+  </script>
+</html>
